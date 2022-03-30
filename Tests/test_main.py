@@ -1,5 +1,6 @@
+import pytest
 from pytest import mark
-
+from main import palindrome
 
 @mark.palindrome
 class PalindromeTests:
@@ -11,3 +12,9 @@ class PalindromeTests:
             assert True
         except:
             assert False
+
+    def test_palindrom_args_is_array(self):
+        """Test that exception is raised for invalid args"""
+        with pytest.raises(ValueError):
+            assert palindrome("Test")
+            assert palindrome(1)
