@@ -24,3 +24,8 @@ class PalindromeTests:
         with pytest.raises(ValueError):
             assert palindrome(['test',])
 
+    def test_palindrom_array_not_contains_numbers(self):
+        """Test that arrays element is not a number"""
+        with pytest.raises(ValueError):
+            assert palindrome(['test', 1])
+            assert palindrome(['test', "1"])
