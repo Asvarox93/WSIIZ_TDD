@@ -6,6 +6,7 @@ def palindrome(arr):
         raise ValueError("List with elements is too short!")
 
     counter = 0
+    palindrome_list = []
     for a in arr:
         if type(a) is not str or a.isnumeric():
             raise ValueError("Elements in list are not type of string or is numeric")
@@ -23,6 +24,8 @@ def palindrome(arr):
 
         if el == reversed_el:
             counter += 1
+            palindrome_list.append(a)
 
-    return counter
+    result = {counter:palindrome_list}
+    return result
 
