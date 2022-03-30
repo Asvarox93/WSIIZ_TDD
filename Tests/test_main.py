@@ -34,8 +34,10 @@ class PalindromeTests:
             assert palindrome(['test', "1"])
 
     @mark.value
-    def test_palindrom_check_if_contains_palindrome(self):
-        """Check if array contains any palindrome elements"""
-        test = ['test','ala','to nie palindrom',"Jeż leje lwa, paw leje lżej"]
+    def test_palindrom_check_if_value_return_in_defined_pattern(self):
+        """Test that returned value is a dict with key as a number of palindrome
+         and value as list with this palindromes """
+        test = ['test', 'ala', 'to nie palindrom', "Jeż leje lwa, paw leje lżej"]
+        result_pattern = {2:['ala',"Jeż leje lwa, paw leje lżej"]}
         result = palindrome(test)
-        assert result == 2
+        assert result == result_pattern
