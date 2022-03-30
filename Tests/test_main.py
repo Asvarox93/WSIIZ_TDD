@@ -18,3 +18,8 @@ class PalindromeTests:
         with pytest.raises(ValueError):
             assert palindrome("Test")
             assert palindrome(1)
+
+    def test_palindrom_array_len_more_then_1(self):
+        """Bla blab """
+        with pytest.raises(ValueError):
+            assert palindrome(['test',])
