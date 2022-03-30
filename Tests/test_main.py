@@ -20,6 +20,7 @@ class PalindromeTests:
             assert palindrome(1)
 
     def test_palindrom_array_len_more_then_1(self):
-        """Bla blab """
+        """Test that input array is longer then 1 element"""
         with pytest.raises(ValueError):
             assert palindrome(['test',])
+
